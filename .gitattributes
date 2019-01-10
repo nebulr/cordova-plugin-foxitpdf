@@ -1,0 +1,2 @@
+src/ios/libFoxitRDKUIExtensions.a filter=lfs diff=lfs merge=lfs -text
+src/ios/FoxitRDK.framework/FoxitRDK filter=lfs diff=lfs merge=lfs -text

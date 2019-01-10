@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/nebulr/cordova-plugin-foxitpdf.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/nebulr/cordova-plugin-foxitpdf.git",
+        "spec": "git+https://github.com/nebulr/cordova-plugin-foxitpdf.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:nebulr/cordova-plugin-foxitpdf.git",
+          "sshUrl": "git+ssh://git@github.com/nebulr/cordova-plugin-foxitpdf.git",
+          "httpsUrl": "git+https://github.com/nebulr/cordova-plugin-foxitpdf.git",
+          "gitUrl": "git://github.com/nebulr/cordova-plugin-foxitpdf.git",
+          "shortcut": "github:nebulr/cordova-plugin-foxitpdf",
+          "directUrl": "https://raw.githubusercontent.com/nebulr/cordova-plugin-foxitpdf/master/package.json"
+        }
+      },
+      "/Users/jmeyer/workspace/suprabook/dist/mobile"
+    ]
+  ],
+  "_from": "git+https://github.com/nebulr/cordova-plugin-foxitpdf.git",
+  "_id": "cordova-plugin-foxitpdf@5.1.6",
+  "_inCache": true,
+  "_location": "/cordova-plugin-foxitpdf",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/nebulr/cordova-plugin-foxitpdf.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/nebulr/cordova-plugin-foxitpdf.git",
+    "spec": "git+https://github.com/nebulr/cordova-plugin-foxitpdf.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:nebulr/cordova-plugin-foxitpdf.git",
+      "sshUrl": "git+ssh://git@github.com/nebulr/cordova-plugin-foxitpdf.git",
+      "httpsUrl": "git+https://github.com/nebulr/cordova-plugin-foxitpdf.git",
+      "gitUrl": "git://github.com/nebulr/cordova-plugin-foxitpdf.git",
+      "shortcut": "github:nebulr/cordova-plugin-foxitpdf",
+      "directUrl": "https://raw.githubusercontent.com/nebulr/cordova-plugin-foxitpdf/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/nebulr/cordova-plugin-foxitpdf.git#82f085d29fbe4bf4023a78f052f235c8f0bb3e29",
+  "_shasum": "3133db0a96672ef76cb199700e7df5a342f3200d",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/nebulr/cordova-plugin-foxitpdf.git",
+  "_where": "/Users/jmeyer/workspace/suprabook/dist/mobile",
+  "author": {
+    "name": "foxit software"
+  },
+  "bugs": {
+    "url": "https://github.com/foxitsoftware/cordova-plugin-foxitpdf/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-foxitpdf",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "cordova pdf preview plugin with Foxit Pdf sdk",
+  "devDependencies": {},
+  "gitHead": "82f085d29fbe4bf4023a78f052f235c8f0bb3e29",
+  "homepage": "https://github.com/foxitsoftware/cordova-plugin-foxitpdf#readme",
+  "keywords": [
+    "pdf",
+    "foxit",
+    "preview",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "Apache 2.0 License",
+  "name": "cordova-plugin-foxitpdf",
+  "optionalDependencies": {},
+  "readme": "<!--\n# license: Licensed to the Apache Software Foundation (ASF) under one\n#         or more contributor license agreements.  See the NOTICE file\n#         distributed with this work for additional information\n#         regarding copyright ownership.  The ASF licenses this file\n#         to you under the Apache License, Version 2.0 (the\n#         \"License\"); you may not use this file except in compliance\n#         with the License.  You may obtain a copy of the License at\n#\n#           http://www.apache.org/licenses/LICENSE-2.0\n#\n#         Unless required by applicable law or agreed to in writing,\n#         software distributed under the License is distributed on an\n#         \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\n#         KIND, either express or implied.  See the License for the\n#         specific language governing permissions and limitations\n#         under the License.\n-->\n\n# cordova-plugin-foxitpdf\n    This plugin adds the ability to easily preview any PDF file in your Cordova application\n\n## Installation\n```bash\ncordova plugin add cordova-plugin-foxitpdf\n```\n\nBecause of some large file in our project ,if you update faild please try the other way\n1. clone this project\n2. add plugin from local by this command :\ncordova plugin add ~/abc/cordova-plugin-foxitpdf (This address is replaced by your own)\n\n## Note\n    we just provide Trial key for 10 days ，if you try this plugin and then faild maybe the key is invalid .so please note the key expiration tiem.\n    if you want longer time key , please contact us.\n\n    now the key expiration day is ## 3-11 ,please note.\n\n## Major update\n    Now our plugin is also using Foxit RDK 5.1\n\n## Usage Instructions for iOS\nThanks to the new version, and now we use the plug-in iOS only need a few simple steps on it (no longer like the 3.0 version of the kind of cumbersome operation)\n\n1. Target -> Build setting -> Other Linker Flags -> + ->  `-lstdc++`\n    ![](https://raw.githubusercontent.com/foxitsoftware/cordova-plugin-foxitpdf/master/ios_step1.png)\n2. If appear FoxitRDK.framework `image not found` error, Make sure that Target -> General -> Embedded Binaries -> have FoxitRDK.framework\n```diff\n-PS:\n-    Maybe xcode does not help us to add FoxitRDK.framework or libFoxitRDKUIExtensions.a correctly\n-    Just delete it and re-add it\n```   \n3. Target -> Build Phases -> Copy Bundle Resources ->  +  -> `Resource`\n\n    Resource folder -- found in the `Plugins/cordova-plugin-foxitpdf/uiextensions/resource` folder\n\n    or use the method of `Add Files to xxx` ,remember check the option of `Create Group`\n\n\n> `Note` Do not forget to add pdf files  \n   You can add the PDF to Copy Bundle Resources directly. Just left-click the your project, find Copy Bundle Resources in the Build Phases tab, press on the + button, and choose the file to add. You can refer to any PDF file, just add it to the Xcode’s Copy Bundle Resources.\n\n\nThe preparatory work has been completed，Now,you can use this code everywhere in your project\n\n```js\n    var success = function(data){\n        console.log(data);\n    }\n    var error = function(data){\n        console.log(data);\n    }\n\n    var filePath = 'file://path/to/your/file';\n    //var filePath = cordova.file.applicationDirectory + 'getting_started_ios.pdf';\n    window.FoxitPdf.preview(filePath,success,error);\n```\n\n<s>1. In your Xcode project, find the FoxitSource folder and  \"UI Extension\" folder(in blue), right click and delete it, confirm \"Remove Reference\" when prompted. Create the FoxitSource group (in yellow) (because Cordova plug-in can not create iOS group).</s>\n\n<s>2. Turn off arc mode, Build Settings -> Objective-C Automatic Reference Counting to NO </s>\n\n<s>3. Embed Foxit RDK.framework General -> Embed Frameworks -> + -> FoxitRDK.framework </s>\n\n<s>4. Insert the following code into the AppDelegate.h file\n\n\t```objective-c\n\t#import \"UIExtensionsSharedHeader.h\"\n\t#import \"Defines.h\"\n\t#define DEMO_APPDELEGATE  ((AppDelegate*)[[UIApplication sharedApplication] delegate])\n\n\t@property (nonatomic, strong) FSPDFViewCtrl* pdfViewCtrl;\n\t@property (nonatomic, assign) BOOL isFileEdited;\n\t@property (nonatomic, copy) NSString* filePath;\n\t@property (nonatomic, assign) BOOL isScreenLocked;\n\t```\n</s>\n\n<s>5. In the project configuration to increase the direction of support\n\tGeneral -> Deployment info -> Device Orientation ,   Check\n\tPortrait , Landscape Left , Landscape Right\n</s>\n\n## window.FoxitPdf.addEventListener\n\n> Adds a listener for an event\n\n    window.FoxitPdf.addEventListener(eventname,callback);\n\n- __eventname__: the event to listen for _(String)_\n\n  - __onDocSaved__: event fires when document saved.\n\n- __callback__: the function that executes when the event fires. The function is passed an `InAppBrowserEvent` object as a parameter.\n\n## Example\n\n```javascript\n\nwindow.FoxitPdf.addEventListener('onDocSaved',function(data){\n  console.log('onDocSaved callback ',data);\n});\n\n```\n\n\n## Usage Instructions for Android\nAndroid do not have to make any changes, you can directly use\n\n```js\nvar success = function(data){\n    console.log(data);\n}\nvar error = function(data){\n    console.log(data);\n}\nvar filePath = 'file://path/to/your/file';\n// var filePath = \"/mnt/sdcard/getting_started_ios.pdf\";\nwindow.FoxitPdf.preview(filePath,success,error);\n```\n\n## PPT\nWant to see more details, see forums.\n\n[PPTX - How to use cordova-plugin-foxitpdf](http://forums.foxitsoftware.com/forum/portable-document-format-pdf-tools/foxit-cloud/cordova-plugin-foxitpdf/162972-ppt-how-to-use-cordova-plugin-foxitpdf)\n\n## YOUTUBE\n[![How to use cordova-plugin-foxitpdf](http://img.youtube.com/vi/3stdbwcm68k/maxresdefault.jpg)](https://youtu.be/3stdbwcm68k)\n\n\n## iOS Screen Shot\n![](https://raw.githubusercontent.com/foxitsoftware/cordova-plugin-foxitpdf/master/plugin_ios.gif)\n\n\n\n## Android Screen Shot\n![](https://raw.githubusercontent.com/foxitsoftware/cordova-plugin-foxitpdf/master/plugin_android.gif)\n\n\n## Supported Platforms\n\n- iOS\n\n- Android\n\n\n\n## IOS Quirks\n\n1. The first argument in the preview method currently only supports absolute paths for incoming files.\n\n    You can obtain the absolute path to the file using the method provided by the [cordova-plugin-file] (https://github.com/apache/cordova-plugin-file) plugin.\n\n    Use the following command to add the [cordova-plugin-file] (https://github.com/apache/cordova-plugin-file) plugin to your project\n\n    ```bash\n    cordova plugin add cordova-plugin-file\n    ```\n\n2. Note: in some cases the resource folder are not added correctly and the number of items is the same because of XCode bug.（e.g.  Xcode 8.3.3）\nIn that case remove the added reference from project tree and then add the Resource using the project tree - Add files to \"YourProjectName\" ,remember when use this method enable the option of\n\"copy items if needed\" and \"create groups\"\n\nIf something like the error in the following picture appears, try the method in step 2\n![](https://raw.githubusercontent.com/foxitsoftware/cordova-plugin-foxitpdf/master/lack_resource.png)\n\n## Android Quirks\n\n<s>NOTE: Since the functionality associated with Reply in UIExtension is using FragmentActivity, the current plugin does not handle it, so there is a problem with using it. Will do further processing.</s>\n\n<s>In addition: the current plug-ins already contain armeabi-v7a library, if you want to support other platforms, you need to refer to the Foxit RDK library for other libraries which can be introduced into the project.</s>\n\n\n## Quick Example\n\nThe PDF file needs to be placed in the project beforehand. The location is in the project root by default\n\n```js\nvar success = function(data){\n    console.log(data);\n}\nvar error = function(data){\n    console.log(data);\n}\nfunction preview(){\n    var filePath = cordova.file.applicationDirectory + 'getting_started_ios.pdf';\n    window.FoxitPdf.preview(filePath,success,error);\n}\n```\n\n\n## Attention\n\n1. The product is still in the early stage of development. We will continue to focus on refining and improving this project.\n\n2. if you cordova version is 7.0.0 maybe you will encounter this problem\nno such file or directory, open 'xxxx/platforms/android/AndroidManifest.xml'\nthis is cordova bug,on this link has solution:\nhttps://cordova.apache.org/announcements/2017/12/04/cordova-android-7.0.0.html\n\n>However this a major breaking change for people creating standalone Cordova Android projects. This also means that the locations of files have changed and have been brought in line to the structure used by Android Studio.\nThis may affect plugin.xml files and config.xml files that use edit-config, and make it so plugins that use edit-config will not be able to be compatible with both Android 6.x and Android 7.x. To fix this issue, please do the following in your XML files\n\n\n## Feedback or contribution code\n\nYou can ask us questions or report bugs in [here](https://github.com/foxitsoftware/cordova-plugin-foxitpdf/issues).\n\nYou can also send email **huang_niu@foxitsoftware.com** to explain your problem.\n\nIf you have a better code implementation, please fork this project and launch your Pull-Request, we will promptly deal with. Thanks!\n\n\n## Request a Quote\nIf you encounter “Invalid license” tips, please go to the following URL for official trial license key:\n\nhttp://www.foxitsdk.com/products/mobile-pdf-sdk/request-quote/?from=cordova-plugin-foxitpdf\n\n## More Support\n\nhttp://forums.foxitsoftware.com/forum/portable-document-format-pdf-tools/foxit-cloud/cordova-plugin-foxitpdf\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foxitsoftware/cordova-plugin-foxitpdf.git"
+  },
+  "version": "5.1.7"
+}
